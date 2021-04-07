@@ -21,8 +21,6 @@ public class Main{
                         s+= n2 - (s + x.length());
                         s+= n1 - x.length();
                         ans = Math.min(ans,s);  
-                    }else{
-                        
                     }
                 }
             }
