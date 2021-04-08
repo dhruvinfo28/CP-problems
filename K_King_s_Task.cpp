@@ -21,7 +21,7 @@ bool check(vector<int> arr){
 
 //The key point here is applying the same operation consecutively returns the orignal sequence back, hence sequence has to be 1 2 1
 // or 2 1 2
-//Next the outputs after operations will be periodic , i.e. after every 2*n operations we will get the same sequence back
+//Next the outputs after operations will be periodic , i.e. after every 2*n operations we will get the initial sequence back(in case if n is odd) if n is even the period is of four operations
 //Note that these operations are either 1 2 1... or 2 1 2 ...
 //Hence loop from 0 to 2n-1 perform operations and check if it got sorted or not , if it did, choose the minimum number of operations 
 //obtained from sequence one (121) and sequence two (212) else print -1
