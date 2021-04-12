@@ -1,2 +1,2 @@
 D_Epic_Transformation -> Learnt priority queue and using it how to do max queries.(If a queue of pairs , order will be non increasing according to the first in the pair)
-C_Double_ended_Strings -> Longest common substring
+C_Double_ended_Strings -> Longest common substring(done as O(n*m^2))
