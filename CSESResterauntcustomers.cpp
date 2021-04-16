@@ -6,19 +6,20 @@ int main(){
     int l,r;
     for(int i=0;i<n;i++){
         cin>>l>>r;
-        vec.push_back(make_pair(l,1));
-        vec.push_back(make_pair(r,-1));
+        vec.push_back({l,1});
+        vec.push_back({r,-1});
     }
-    sort(vec.begin(), vec.end());
-    int max_sum = 0;
-    int prefix_sum  = 0;
-    for(int i=0;i<n;i++){
-        prefix_sum += vec[i].second;
-        if(prefix_sum<=0){
-            prefix_sum = 0;
+    sort(vec.begin(),vec.end());
+    int curr_ =0 , max_ = INT_MIN;
+    for(int i=0;i<vec.size();i++){
+        if(vec[i].second == 1){
+            curr_++;
+        }else{
+            curr_--;
         }
-        max_sum = max(prefix_sum, max_sum);
+        max_=max(max_,curr_);
     }
-    cout<<max_sum<<endl;
+    cout<<max_<<"\n";
+    
     return 0;
 }
